@@ -1,0 +1,69 @@
+.assistantContainer {
+  font-size: 14px;
+
+  display: flex;
+  flex-direction: column;
+  //height: 400px;
+  //min-height: 400px;
+  //max-height: 400px;
+
+  .messageList {
+    border-radius: 8px;
+    padding: 12px;
+    background-color: #141414;
+    flex: 1;
+    overflow-y: auto;
+
+    .messageItem {
+      display: flex;
+      align-items: start;
+      column-gap: 6px;
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+
+    .messageItemAssistant {
+      .messageItem;
+      .content {
+        background: #39255d;
+        border-radius: 8px;
+        flex: 1;
+        padding: 8px 12px;
+      }
+    }
+
+    .messageItemUser {
+      .messageItem;
+      .content {
+        background: #1f1f1f;
+        border-radius: 8px;
+        flex: 1;
+        padding: 8px 12px;
+        margin-left: 38px;
+      }
+    }
+  }
+
+  .inputRow {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+  }
+
+  //.limitation {
+  //  position: fixed;
+  //  right: 6px;
+  //  bottom: 6px;
+  //  font-size: 12px;
+  //  //text-align: right;
+  //  color: rgba(255, 255, 255, 0.5);
+  //}
+
+  .cursor {
+    display: none;
+  }
+}

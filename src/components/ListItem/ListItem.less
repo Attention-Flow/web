@@ -1,0 +1,39 @@
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  //font-weight: bold;
+  font-size: 14px;
+  padding: 4px 8px;
+  margin-top: 4px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  cursor: pointer;
+  column-gap: 12px;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .icon {
+    margin-right: 6px;
+  }
+
+  .title {
+    white-space: nowrap;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+    width: 100%;
+  }
+}
+
+.alignCenter {
+  display: flex;
+  align-items: center;
+}
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;
+}

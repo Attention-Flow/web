@@ -1,0 +1,151 @@
+@dashboard-width: 280px;
+
+.dashboard {
+  background: #141414;
+  height: 100vh;
+  width: @dashboard-width;
+  min-width: @dashboard-width;
+  max-width: @dashboard-width;
+  //padding: 16px;
+  //overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 8;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  transition: width 0.2s ease-in-out, min-width 0.2s ease-in-out;
+
+  .dashboardContent {
+    width: 100%;
+    padding: 16px;
+    padding-top: 72px;
+    //height: 100vh;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+  }
+
+  .dashboardChartContainer {
+    padding: 16px;
+    width: 100%;
+    background: #141414;
+    //height: 200px;
+    overflow-x: hidden;
+  }
+
+  .applicationHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1f1f1f;
+    padding: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .applicationName {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+  }
+
+  .section {
+    margin-top: 8px;
+
+    .sectionTitle {
+      transition: all 0.2s ease;
+      border-radius: 4px;
+      color: rgba(255, 255, 255, 0.65);
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: bold;
+      font-size: 12px;
+      &:hover {
+        color: rgba(255, 255, 255, 0.95);
+      }
+    }
+    .sectionTitleSelectable {
+      cursor: pointer;
+      &:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: rgba(255, 255, 255, 0.95);
+      }
+    }
+    .sectionTitleSelected {
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    .titleButton {
+      color: rgba(255, 255, 255, 0.95);
+    }
+    .collapseButton {
+      transition: transform 0.2s ease;
+      font-size: 10px;
+      margin-right: 6px;
+    }
+    .collapseButtonCollapsed {
+      transform: rotate(-90deg);
+    }
+
+    .sectionItem {
+      transition: all 0.2s ease;
+      border-radius: 4px;
+      color: rgba(255, 255, 255, 0.65);
+      margin-left: 16px;
+      margin-top: 4px;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: bold;
+      font-size: 12px;
+      cursor: pointer;
+      &:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: rgba(255, 255, 255, 0.95);
+      }
+
+      .sectionItemName {
+        flex: 1;
+        white-space: nowrap;
+        word-break: break-all;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .sectionItemActive {
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.95);
+    }
+    .sectionItemPending {
+      cursor: auto;
+      &:hover {
+        background: unset;
+        color: rgba(255, 255, 255, 0.65);
+      }
+    }
+  }
+}
+
+.alignCenter {
+  display: flex;
+  align-items: center;
+}
+
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboardCollapsed {
+  width: 0;
+  min-width: 0;
+}

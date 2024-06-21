@@ -1,0 +1,37 @@
+@import 'mac-scrollbar/dist/mac-scrollbar.css';
+
+body {
+  color: rgb(255 255 255 / 95%);
+  margin: 0;
+  background: #1f1f1f;
+  overflow: hidden;
+  user-select: none;
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('/Lato-Regular.ttf');
+  font-weight: 400 500;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('/Lato-Bold.ttf');
+  font-weight: 600 700;
+}
+
+* {
+  font-family: Lato, 'PingFang SC', sans-serif, 'Microsoft YaHei';
+}
+
+.react-loading-skeleton {
+  line-height: unset !important;
+}
+
+span:has(.react-loading-skeleton) {
+  line-height: 1;
+}
